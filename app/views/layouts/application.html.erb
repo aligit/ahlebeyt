@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ahlebeyt</title>
+  <title>Association Islamique d'Ahl-El-Bayt(s) de Suisse - Geneve</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body  class="body">
 
+		<%= image_tag "ahlebeyt_logo.png",:class => "logo" %>
+	<header class="mainHeader">
+		<nav>
+			<ul>
+       <li class="<%= "active" if params[:controller] == "home" && params[:action] == "index" %>"><%= link_to "Accueil", home_index_path %></li>
+			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "don" %>"><%= link_to "Don et Sadaqa",  home_don_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "about" %>"><%= link_to "A propos",  home_about_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "azan" && params[:action] == "index" %>"><%= link_to "Horaires de prières",  azan_index_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "contact" %>"><%= link_to "Nous contacter",  home_contact_path %></li> 
+			</ul>
+		</nav>
+	</header>
 <%= yield %>
 
 </body>

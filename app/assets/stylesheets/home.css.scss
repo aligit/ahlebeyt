@@ -1,0 +1,41 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+dt { font-weight: bold;margin-top:1em;}
+dd { margin:  0.5em 0 0 2em;}
+#prayerlist div {
+  width: 200px;
+}
+ 
+#prayerlist h2 {
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+#prayerlist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+#prayerlist li {
+  float: left; width: 50%;//two column effect
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+// dt { font-weight: bold;margin-top:1em;}
+// dd { margin:  0.5em 0 0 2em;}
+#prayerlist li:last-child {
+//  border: none;
+}
+
+.logo{
+  //height: 100px; width: 200px; overflow: hidden;
+  height: 200px;
+  width: 200px;
+}
+
+.hidden{
+  visibility:hidden;
+}
