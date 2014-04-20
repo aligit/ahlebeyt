@@ -18,9 +18,25 @@
 			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "about" %>"><%= link_to "A propos",  home_about_path %></li> 
 			 <li class="<%= "active" if params[:controller] == "azan" && params[:action] == "index" %>"><%= link_to "Horaires de prières",  azan_index_path %></li> 
 			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "contact" %>"><%= link_to "Nous contacter",  home_contact_path %></li> 
+     <div id="user_nav">
+       <% if user_signed_in? %>
+         <%= link_to "Modifier le profil",  edit_user_registration_path %>
+         <%= link_to "Déconnexion",destroy_user_session_path, method: :delete %>
+  <!-- Logged in as <strong><%# current_user.email %></strong>. -->
+       <% else %>
+         <%# link_to "Sign up",  new_user_registration_path %>
+         <%# link_to "Login",new_user_session_path %>
+       <% end %>
+     </div>
 			</ul>
 		</nav>
 	</header>
+  <% if notice %> 
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %> 
+  <% if alert %> 
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 <%= yield %>
 
 </body>

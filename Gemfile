@@ -43,3 +43,5 @@ gem 'ckeditor'
 #To add images to,install this paperclip. install imagemagick on the
 #server
 gem 'paperclip'
+#Authentication in Rails
+gem 'devise'
