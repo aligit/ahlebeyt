@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.rc1'
-# Use postgresql as the database for Active Record
+# Use postgresql as the database for Active Record. Install postgresql
+# on the machine first
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
@@ -38,4 +38,8 @@ gem 'thin'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#html editor for the admin
 gem 'ckeditor'
+#To add images to,install this paperclip. install imagemagick on the
+#server
+gem 'paperclip'

@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_languages, only: [:new,:edit]
+  before_action :set_languages, only: [:new,:edit,:create,:update]
   # GET /events
   # GET /events.json
   def index
