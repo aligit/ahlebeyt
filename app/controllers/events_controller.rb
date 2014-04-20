@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :set_languages, only: [:new,:edit]
   # GET /events
   # GET /events.json
   def index
@@ -40,7 +41,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(event_params)
 
     respond_to do |format|
       if @event.save
@@ -59,7 +60,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     respond_to do |format|
-      if @event.update_attributes(params[:event])
+      if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,4 +81,13 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def set_languages
+      @languages = Rails.application.config.ab_languages
+    end
+
+    def event_params
+      params.require(:event).permit(:title, :body, :startdate, :enddate, :location, :speaking_languages => [])
+    end
 end

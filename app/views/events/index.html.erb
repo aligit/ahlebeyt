@@ -3,12 +3,11 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Description</th>
-    <th>Date</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Language</th>
-    <th>Spoker</th>
+    <th>Body</th>
+    <th>StartDate</th>
+    <th>EndDate</th>
+    <th>Language(s)</th>
+    <th>Location</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,12 +16,11 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.title %></td>
-    <td><%= event.description %></td>
-    <td><%= event.date %></td>
-    <td><%= event.start %></td>
-    <td><%= event.end %></td>
-    <td><%= event.language %></td>
-    <td><%= event.spoker %></td>
+    <td><%= event.body %></td>
+    <td><%= event.startdate %></td>
+    <td><%= event.enddate %></td>
+    <td><%= event.speaking_languages %></td>
+    <td><%= event.location %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
