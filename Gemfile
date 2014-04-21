@@ -45,3 +45,6 @@ gem 'ckeditor'
 gem 'paperclip'
 #Authentication in Rails
 gem 'devise'
+# Debugging with pry
+gem 'pry-rails', :group => :development
+gem 'pry-debugger', :group => :development

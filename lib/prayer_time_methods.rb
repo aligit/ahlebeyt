@@ -19,8 +19,9 @@ SERVICE = '/getprayertimes.php?'
 	def get_prayer_city_params(city)
 		lat = "lat=#{get_city_lat(city)}"
 		long = "lon=#{get_city_long(city)}"
-		timezone = "gmt=#{get_city_timezone(city)}"
+		timezone = "gmt=#{get_gmt_offset(city)}"
 		school = "school=6"
+    # binding.pry
 		#Parameters related to Shia Ithna-Ashari, Leva institute, Qum 
 		#school_params = "&params=16,4,14.0,0,0,0,0,1,0,0"
 
@@ -42,8 +43,14 @@ SERVICE = '/getprayertimes.php?'
 		return 6.1422961.to_s
     end 
 
-	def get_city_timezone(city)
+	def get_gmt_offset(city)
 		#Default for geneva
-		return 60.to_s
-    end 
+    #Depends on TZInfo gem which is by default included in Rails4
+    app_time_zone = Rails.application.config.time_zone
+    timezone = TZInfo::Timezone.get(app_time_zone)
+    current_period = timezone.current_period
+    # gmt or utc offset in minutes
+    gmt_offset = current_period.utc_total_offset/60
+		return gmt_offset.to_s
+ end
 end
