@@ -11,5 +11,7 @@
 # WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 # GO AFTER THE REQUIRES BELOW.
 #
+# We have removed "#= require_tree ." as we have put in
+# application.html.erb the parameter controller_name
 #= require angular
 #= require ckeditor/init
