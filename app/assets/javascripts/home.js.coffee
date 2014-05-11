@@ -13,13 +13,13 @@
 @HomeCtrl = angular.module("Home", [])
 
 # Sets up routing
-@HomeCtrl.config(['$routeProvider', ($routeProvider) ->
-  # Route for '/post'
-  $routeProvider.when('/post', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' } )
-
-  # Default
-  $routeProvider.otherwise({ templateUrl:
-  '../assets/mainIndex.html', controller: 'IndexCtrl' } )
-
-      ])
+# @HomeCtrl.config(['$routeProvider', ($routeProvider) ->
+#   # Route for '/post'
+#   $routeProvider.when('/post', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' } )
+#
+#   # Default
+#   $routeProvider.otherwise({ templateUrl:
+#   '../assets/mainIndex.html', controller: 'IndexCtrl' } )
+#
+#       ])
 
