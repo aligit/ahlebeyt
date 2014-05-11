@@ -1,4 +1,4 @@
-@HomeCtrl = angular.module("Raffler", [])
+@HomeCtrl = angular.module("Home", [])
 @HomeCtrl = ($scope) ->
   $scope.entries = [
     {name: "Larry"}
