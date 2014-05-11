@@ -2,8 +2,11 @@
 <html ng-app="Home">
 <head>
   <title>Association Islamique d'Ahl-El-Bayt(s) de Suisse - Geneve</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Important: We have removed default turbolink stuff. Also I've add -->
+  <!-- controller_name so that home.js.coffee is loaded by default       -->
+  <!-- all javascript files are added out there                          -->
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application', controller_name %>
   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
   <%= csrf_meta_tags %>
 </head>

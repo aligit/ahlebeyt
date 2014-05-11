@@ -13,4 +13,3 @@
 #
 #= require angular
 #= require ckeditor/init
-#= require_tree .
