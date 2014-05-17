@@ -10,16 +10,25 @@
 
 # "Home" is the name of ng-app that is used in the view at
 # /home/index.html.erb
-@HomeCtrl = angular.module("Home", [])
+# @HomeCtrl = angular.module("Home", [])
 
 # Sets up routing
 # @HomeCtrl.config(['$routeProvider', ($routeProvider) ->
+#   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'HomeCtrl' } )
+#   ])
+# ...
+
+# Creates new Angular module called 'Blog'
+Blog = angular.module('Home', ['ngRoute'])
+
+# Sets up routing
+Blog.config(['$routeProvider', ($routeProvider) ->
 #   # Route for '/post'
 #   $routeProvider.when('/post', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' } )
 #
 #   # Default
-#   $routeProvider.otherwise({ templateUrl:
-#   '../assets/mainIndex.html', controller: 'IndexCtrl' } )
+  $routeProvider.otherwise({ templateUrl: '../assets/homeIndex.html', controller: 'HomeCtrl' } )
 #
-#       ])
+])
+
 

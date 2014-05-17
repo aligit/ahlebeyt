@@ -14,4 +14,5 @@
 # We have removed "#= require_tree ." as we have put in
 # application.html.erb the parameter controller_name
 #= require angular
+#= require angular-route
 #= require ckeditor/init

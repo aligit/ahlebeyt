@@ -4,6 +4,7 @@
     {name: "Larry"}
     {name: "Pierre"}
     {name: "Moe"}
+    {name: "Maman"}
   ]
 
   $scope.addEntry = ->
