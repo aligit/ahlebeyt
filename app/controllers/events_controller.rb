@@ -6,7 +6,6 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @upcoming = Event.get_upcoming_events
-    binding.pry
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
