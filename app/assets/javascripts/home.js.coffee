@@ -30,5 +30,3 @@ Blog.config(['$routeProvider', ($routeProvider) ->
   $routeProvider.otherwise({ templateUrl: '../assets/homeIndex.html', controller: 'HomeCtrl' } )
 #
 ])
-
-
