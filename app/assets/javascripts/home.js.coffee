@@ -23,8 +23,8 @@ Blog = angular.module('Home', ['ngRoute'])
 
 # Sets up routing
 Blog.config(['$routeProvider', ($routeProvider) ->
-#   # Route for '/post'
-#   $routeProvider.when('/post', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' } )
+#   # Route for '/event'
+  $routeProvider.when('/event', { templateUrl: '../assets/mainEvent.html', controller: 'EventCtrl' } )
 #
 #   # Default
   $routeProvider.otherwise({ templateUrl: '../assets/homeIndex.html', controller: 'HomeCtrl' } )

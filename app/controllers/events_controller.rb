@@ -1,14 +1,20 @@
 class EventsController < ApplicationController
-  before_action :set_languages, only: [:new,:edit,:create,:update]
-  before_action :authenticate_user!
+  respond_to :json
+  # before_action :set_languages, only: [:new,:edit,:create,:update]
+  # before_action :authenticate_user!
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
     @upcoming = Event.get_upcoming_events
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @events }
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @events }
+    # end
+
+    # Respond to request with post data in json format
+    respond_with(@events) do |format|
+      format.json { render :json => @events.as_json }
     end
   end
 
