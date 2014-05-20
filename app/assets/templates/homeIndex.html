@@ -1,14 +1,9 @@
   <div class="content">
     <article class="topcontent">
-    <form ng-submit="addEntry()">
-      <input type="text" ng-model="newEntry.name">
-      <input type="submit" value="Add">
-    </form>
-    <ul>
-      <li ng-repeat="entry in entries">
-        {{entry.name}}
-      </li>
-    </ul>
+    <div class="row" ng-repeat="event in data.events">
+        <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
+        <p>{{event.body}}</p>
+    </div>
       <header>
         <!-- <h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Programme du mois de Mouharram</a></h2> -->
         <h2>Prochain événement</h2>
