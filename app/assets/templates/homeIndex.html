@@ -1,12 +1,8 @@
   <div class="content">
     <article class="topcontent">
-    <div class="row" ng-repeat="event in data.events">
-        <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
-        <p>{{event.body}}</p>
-    </div>
       <header>
         <!-- <h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Programme du mois de Mouharram</a></h2> -->
-        <h2>Prochain événement</h2>
+        <h1>Prochains événements</h1>
       </header>
 
       <!-- <footer>
@@ -15,13 +11,18 @@
 
       <content>
       <div class="g-post" data-href="https://plus.google.com/events/cpbbcs7d1ll9otqr7tb2kbnrqng"></div>
-      <p>
-      A l'occasion des deux anniversaires au cours de cette semaine et la semaine prochaine, l'association d'Ahl-el-Bayt de Genève organize les programmes suivant:
-      </p>
-      <p>
-      Jeudi 8 mai   2014 à 20h00 : Lecture du  Dua Komeil suivi de la cérémonie à l'occasion d'anniversaire de l'Imam Muhammad Taghi (AS).
-      </p>
-      <p>Dimanche 11 mai   2014 du 17h00 à 18h00 : Cérémonie à l'occasion d'anniversaire de l'Imam Ali (AS) suivi d'un  Buffet canadien.</p>
+    <div class="row" ng-repeat="event in data.events">
+      <div ng-switch="$index">
+        <div ng-switch-when="0">
+          <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
+          <p>{{event.body}}</p>
+        </div>
+        <div ng-switch-default>
+          <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
+          <p>{{event.startdate | date:'yyyy-MM-dd'}}</p>
+        </div>
+      </div> 
+    </div>
       <!-- </p> -->
       <!-- <p> -->
       <!-- <dl> -->
