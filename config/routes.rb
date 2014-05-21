@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   ## The url to sign-in is: localhost:3000/users/seconnecter
   devise_for :users, path_names: {sign_in: :seconnecter, sign_out: :logout}
   mount Ckeditor::Engine => '/ckeditor'
-  resources :events
+  resources :events do
+    collection do
+      #localhost:3000/event/upcomings.json
+      get 'upcomings'
+    end
+  end
 
 
   # Example of regular route:

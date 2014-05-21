@@ -4,7 +4,7 @@
     events: [{title: 'Loading events...', contents: ''}]
 
   loadEvents = ->
-    $http.get('./events.json').success( (data) ->
+    $http.get('../events/upcomings.json').success( (data) ->
       $scope.data.events = data
       console.log('Successfully loaded events.')
     ).error( ->
