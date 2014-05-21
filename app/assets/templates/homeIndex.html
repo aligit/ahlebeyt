@@ -15,13 +15,12 @@
       <div ng-switch="$index">
         <div ng-switch-when="0">
           <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
-          <p>{{event.body}}</p>
+          <p ng-bind-html="renderHtml(event.body)"></p>
         </div>
         <div ng-switch-default>
-          <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
-          <p>{{event.startdate | date:'yyyy-MM-dd'}}</p>
+          <h2><a ng-click="viewEvent($index)">{{event.title}}</a> prévue le {{event.startdate | date:'yyyy-MM-dd HH:mm'}}</h2>
         </div>
-      </div> 
+      </div>
     </div>
       <!-- </p> -->
       <!-- <p> -->

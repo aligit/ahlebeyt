@@ -1,4 +1,4 @@
-@HomeCtrl = ($scope, $location, $http) ->
+@HomeCtrl = ($scope, $location, $http, $sce) ->
 
   $scope.data =
     events: [{title: 'Loading events...', contents: ''}]
@@ -15,6 +15,9 @@
 
   $scope.viewEvent = (eventId) ->
     $location.url('/event/'+eventId)
+
+  $scope.renderHtml = (html_code) ->
+    $sce.trustAsHtml(html_code)
 
 # @HomeCtrl = ($scope) ->
 #   $scope.entries = [
