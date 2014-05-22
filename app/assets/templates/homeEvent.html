@@ -1,5 +1,35 @@
-<h1>{{data.event.id}} - {{data.event.title}}</h1>
-<div>
-  <h2>vraiment putain mec</h2>
-    <p>{{data.event.body}}</p>
-</div>
+
+  <div class="content">
+    <article class="topcontent">
+      <content>
+        <h1>{{data.event.title}}</h1>
+        <div>
+          <h2>sdf</h2>
+            <p>{{data.event.body}}</p>
+        </div>
+      </content>
+    </article>
+  </div>
+
+  <aside class="top-sidebar">
+    <article>
+      <div id="prayerlist">
+        <h2>Horaires de prières (Genève)</h2>
+        <ul>
+          <li>Fajr</li>
+          <li><%=  "salut" %></li>
+          <li>Lever</li>
+          <li><%= "putain" %></li>
+          <li>Dhuhr</li>
+          <li><%= "ss" %></li>
+          <li>Coucher</li>
+          <li><%= "sdi" %></li>
+          <li>Magrib</li>
+          <li><%= "sdfa" %></li>
+        </ul>
+      </div>
+      <p>
+      <%= link_to "Horaires de prières", :controller=>"azan", :action=>"index"  %>
+      </p>
+    </article>
+  </aside>
