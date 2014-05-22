@@ -14,11 +14,11 @@
     <div class="row" ng-repeat="event in data.events">
       <div ng-switch="$index">
         <div ng-switch-when="0">
-          <h2><a ng-click="viewEvent($index)">{{event.title}}</a></h2>
+          <h2><a ng-click="viewEvent(event.id)">{{event.title}}</a></h2>
           <p ng-bind-html="renderHtml(event.body)"></p>
         </div>
         <div ng-switch-default>
-          <h2><a ng-click="viewEvent($index)">{{event.title}}</a> prévue le {{event.startdate | date:'yyyy-MM-dd HH:mm'}}</h2>
+          <h2><a ng-click="viewEvent(event.id)">{{event.title}}</a> prévue le {{event.startdate | date:'yyyy-MM-dd HH:mm'}}</h2>
         </div>
       </div>
     </div>
