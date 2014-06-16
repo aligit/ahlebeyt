@@ -7,6 +7,7 @@
 #= require_tree ./controllers/home
 #= require_tree ./directives/global
 #= require_tree ./directives/home
+#= require PrayTimes
 
 # "Home" is the name of ng-app that is used in the view at
 # /home/index.html.erb
