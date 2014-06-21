@@ -18,13 +18,14 @@
 			<ul>
        <li class="<%= "active" if params[:controller] == "home" && params[:action] == "index" %>"><%= link_to "Accueil", home_index_path %></li>
 			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "don" %>"><%= link_to "Don et Sadaqa",  home_don_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "school" %>"><%= link_to "Ecole",  home_ecole_path %></li> 
 			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "about" %>"><%= link_to "A propos",  home_about_path %></li> 
-			 <li class="<%= "active" if params[:controller] == "azan" && params[:action] == "index" %>"><%= link_to "Horaires de prières",  azan_index_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "azan" && params[:action] == "index" %>"><%= link_to "Horaires(prières)",  azan_index_path %></li> 
 			 <li class="<%= "active" if params[:controller] == "events" && params[:action] == "index" %>"><%= link_to "Evénements",  events_path %></li> 
-			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "contact" %>"><%= link_to "Nous contacter",  home_contact_path %></li> 
+			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "contact" %>"><%= link_to "Contacte",  home_contact_path %></li> 
        <% if user_signed_in? %>
-         <li><%= link_to "Profil",  edit_user_registration_path %></li> 
          <li><%= link_to "Logout",destroy_user_session_path, method: :delete %></li> 
+         <li><%= link_to "Profil",  edit_user_registration_path %></li> 
        <% end %>
      <div id="user_nav">
      </div>
