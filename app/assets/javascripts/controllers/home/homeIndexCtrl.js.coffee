@@ -36,7 +36,6 @@
   $scope.asr      = times['sunset']
   $scope.maghrib  = times['maghrib']
 
-times[azanlist[i].toLowerCase()]
 
 # @HomeCtrl = ($scope) ->
 #   $scope.entries = [

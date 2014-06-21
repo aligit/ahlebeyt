@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   respond_to :json
   before_action :set_languages, only: [:new,:edit,:create,:update]
-  before_action :authenticate_user!, except: [:upcomings,:index]
+  before_action :authenticate_user!, except: [:upcomings,:index,:show]
   # GET /events
   # GET /events.json
   def index
