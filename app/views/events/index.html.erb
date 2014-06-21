@@ -1,13 +1,24 @@
-<h1>Listing events</h1>
+<h1>Tous les événements</h1>
+   <% if user_signed_in? %>
+    <%= link_to 'New Event', new_event_path %>
+   <% end %>
 
-<table>
+   <table style="
+     table-layout: fixed;
+     width: 800px;">
   <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>StartDate</th>
-    <th>EndDate</th>
-    <th>Language(s)</th>
-    <th>Location</th>
+    <th style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 240px;">Titre</th>
+    <th style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 150px;">Début</th>
+    <th style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 150px;">Fin</th>
+    <th style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 70px;">Location</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,19 +26,32 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.title %></td>
-    <td><%= event.body %></td>
-    <td><%= event.startdate %></td>
-    <td><%= event.enddate %></td>
-    <td><%= event.speaking_languages %></td>
-    <td><%= event.location %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 100px;"><%= event.title %></td>
+    <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 100px;"><%= event.startdate.strftime('%d-%m-%y  %H:%M ') %></td>
+    <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 100px;"><%= event.enddate.strftime('%d-%m-%y  %H:%M ') %></td>
+    <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 100px;"><%= event.location %></td>
+       <% if user_signed_in? %>
+        <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 20px;"><%= link_to 'Show', event %></td>
+        <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 15px;"><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td style="border: 1px solid black;
+                     overflow: hidden;
+                     width: 60px;"><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>

@@ -95,7 +95,7 @@ a:hover, a:active {
 .mainHeader nav a:link, .mainHeader nav a:visited {
 	color: #fff;
 	display: inline-block;
-	height: 30px;
+	height: 10px;
 	padding: 5px 23px;
 	text-decoration: none;
 }

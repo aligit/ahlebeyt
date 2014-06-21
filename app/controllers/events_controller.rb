@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
   respond_to :json
   before_action :set_languages, only: [:new,:edit,:create,:update]
-  before_action :authenticate_user!, except: [:upcomings]
+  before_action :authenticate_user!, except: [:upcomings,:index]
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.reverse
     respond_to do |format|
       format.html # index.html.erb
     end
