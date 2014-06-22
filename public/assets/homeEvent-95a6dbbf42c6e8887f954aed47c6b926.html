@@ -1,0 +1,15 @@
+
+  <div class="content">
+    <article class="topcontent">
+      <content>
+        <div>
+          <h1>{{data.event.title}}</h1>
+          <p ng-bind-html="renderHtml(data.event.body)"></p>
+          <p><strong>Date</strong>:{{data.event.startdate | date:'yyyy-MM-dd'}}</p>
+          <p><strong>Début</strong>:{{data.event.startdate | date:'HH:mm'}}</p>
+          <p><strong>Fin</strong>:{{data.event.enddate | date:'HH:mm'}}</p>
+        </div>
+      </content>
+    </article>
+  </div>
+
