@@ -37,7 +37,7 @@ gem 'thin'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+# gem 'debugger', group: [:development, :test]
 #html editor for the admin
 gem 'ckeditor'
 #To add images to,install this paperclip. install imagemagick on the
@@ -46,6 +46,6 @@ gem 'paperclip'
 #Authentication in Rails
 gem 'devise'
 # Debugging with pry
-gem 'pry-rails', :group => :development
-gem 'pry-debugger', :group => :development
+# gem 'pry-rails', :group => :development
+# gem 'pry-debugger', :group => :development
 gem 'angularjs-rails'
