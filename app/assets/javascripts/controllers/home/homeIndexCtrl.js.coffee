@@ -1,4 +1,4 @@
-@HomeCtrl = ($scope, $location, $http, $sce) ->
+@HomeCtrl = ["$scope", "$location", "$http", "$sce", ($scope, $location, $http, $sce) ->
 
   $scope.data =
     events: [{title: 'Loading events...', contents: ''}]
@@ -35,6 +35,7 @@
   $scope.dhuhr    = times['dhuhr']
   $scope.asr      = times['sunset']
   $scope.maghrib  = times['maghrib']
+]
 
 
 # @HomeCtrl = ($scope) ->

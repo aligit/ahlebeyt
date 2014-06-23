@@ -1,4 +1,4 @@
-@EventCtrl = ($scope, $routeParams, $http, $sce) ->
+@EventCtrl = ["$scope", "$routeParams", "$http", "$sce", ($scope, $routeParams, $http, $sce) ->
 
   $scope.data = 
     event: {title: 'My first post', contents: 'Lorem adipiscing id lacus. Aenean iaculis nulla justo.'}
@@ -18,3 +18,4 @@
 
   $scope.data.eventId = $routeParams.eventId
   console.log($routeParams)
+]
