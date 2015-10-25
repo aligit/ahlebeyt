@@ -36,8 +36,10 @@
   $scope.fajr     = times['fajr']
   $scope.sunrise  = times['sunrise']
   $scope.dhuhr    = times['dhuhr']
-  $scope.asr      = times['sunset']
+  $scope.sunset      = times['sunset']
+  $scope.asr      = times['asr']
   $scope.maghrib  = times['maghrib']
+  $scope.isha  = times['isha']
 ]
 
 
