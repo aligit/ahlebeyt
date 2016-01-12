@@ -11,17 +11,6 @@
 
       <content>
       <div class="g-post" data-href="https://plus.google.com/events/cpbbcs7d1ll9otqr7tb2kbnrqng"></div>
-    <div class="row" ng-repeat="event in data.events">
-      <div ng-switch="$index">
-        <div ng-switch-when="0">
-          <h2><a ng-click="viewEvent(event.id)">{{event.title}}:{{event.startdate | date:'yyyy-MM-dd'}}</a></h2>
-          <p ng-bind-html="renderHtml(event.body)"></p>
-        </div>
-        <div ng-switch-default>
-          <h2><a ng-click="viewEvent(event.id)">{{event.title}}</a> prévue le {{event.startdate | date:'yyyy-MM-dd HH:mm'}}</h2>
-        </div>
-      </div>
-    </div>
       <!-- </p> -->
       <!-- <p> -->
       <!-- <dl> -->

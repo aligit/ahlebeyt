@@ -15,18 +15,6 @@
 		<%= image_tag "ahlebeyt_logo.png",:class => "logo" %>
 	<header class="mainHeader">
 		<nav>
-			<ul>
-       <li class="<%= "active" if params[:controller] == "home" && params[:action] == "index" %>"><%= link_to "Accueil", home_index_path %></li>
-			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "don" %>"><%= link_to "Don et Sadaqa",  home_don_path %></li>
-			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "school" %>"><%= link_to "Ecole",  home_ecole_path %></li>
-			 <li class="<%= "active" if params[:controller] == "home" && params[:action] == "about" %>"><%= link_to "A propos",  home_about_path %></li>
-       <li class="<%= "active" if params[:controller] == "azan" && params[:action] == "index" %>"><%= link_to "Horaire de prière",  azan_index_path %></li>
-			 <li class="<%= "active" if params[:controller] == "events" && params[:action] == "index" %>"><%= link_to "Evénements",  events_path %></li>
-       <li class="<%= "active" if params[:controller] == "home" && params[:action] == "contact" %>"><%= link_to "Contacte",  home_contact_path %></li>
-       <% if user_signed_in? %>
-         <li><%= link_to "sign_out",destroy_user_session_path, method: :get %></li> 
-       <% end %>
-			</ul>
 		</nav>
 	</header>
   <% if notice %> 
