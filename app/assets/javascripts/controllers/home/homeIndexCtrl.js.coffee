@@ -8,7 +8,7 @@
   longitude = 6.1422961
   timezone  = 1
   #From autumn until spring dst must be zero and one otherwise TODO
- dst       = 1 from around 30 march
+  dst       = 1 #from around 30 march
   # dst       = 0# 0 from around 25 October
   #From autumn until spring dst must be zero and one otherwise TODO
   method    = 'Tehran'
